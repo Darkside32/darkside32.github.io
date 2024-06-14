@@ -256,8 +256,8 @@ const MapBase = {
     const filterContainer = $('.filters');
     Object.keys(this.markerCategories).forEach(category => {
       const checkbox = $(`<label>${category}</label> <div class="input-checkbox-wrapper">
-                <input class="input-checkbox" type="checkbox" name="checkbox-general-mpdc_shop_sell_feather_00" value="${category}" id="checkbox-general-mpdc_shop_sell_feather_00" checked>
-                <label class="input-checkbox-label" for="checkbox-general-mpdc_shop_sell_feather_00"></label>
+                <input class="input-checkbox" type="checkbox" name="checkbox-${category}" value="${category}" id="checkbox-${category}" checked>
+                <label class="input-checkbox-label" for="checkbox-${category}"></label>
               </div> </br>`)
         .appendTo(filterContainer)
         .find(`input`)

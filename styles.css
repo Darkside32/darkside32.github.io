@@ -464,13 +464,11 @@ select {
 }
 
 .menu-toggle {
-    width: 30px;
-    height: 30px;
-    background-image: url(../../assets/images/timer_bg.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    width: 44px;
+    height: 44px;
+    background:#333;
     position: fixed;
-    z-index: 1000;
+    z-index: 999999999;
     left: 5px;
     top: 5px;
     color: #eee;
@@ -478,6 +476,7 @@ select {
     line-height: 1.85;
     user-select: none;
     cursor: pointer;
+    display: block;
 }
 
 .side-menu {
@@ -1142,24 +1141,7 @@ a.no-style:visited {
     }
 }
 
-@media (min-width: 769px) {
-    .side-menu {
-        width: 400px;
-        top: 0;
-    }
-    .menu-opened {
-        left: 0;
-    }
-    .timer-menu-opened {
-        left: 410px;
-    }
-    .counter-menu-opened {
-        left: 410px;
-    }
-    .top-widget-menu-opened {
-        left: 405px;
-    }
-}
+
 
 /* Tutorial styling */
 
@@ -1481,6 +1463,11 @@ a.no-style:visited {
 }
 
 @media (min-width: 769px) {
+    .side-menu {
+        width: 400px;
+        left: -400px;
+        top: 0;
+    }
     .side-menu .menu-option:after,  
     .side-menu .collectible-wrapper:after {
         top: 1px;
@@ -1492,6 +1479,12 @@ a.no-style:visited {
     .side-menu .menu-option:hover:after,
     .side-menu .collectible-wrapper:hover:after {
         opacity: 1;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-opened {
+        left: 0;
     }
 }
 

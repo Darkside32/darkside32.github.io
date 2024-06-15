@@ -119,11 +119,10 @@ const MapBase = {
   markersGroup: null,
   markersTepoGroup: null,
   filtersData: [
-    { lat: '1', lng: '2', name: 'Test', category: 'Gov Shops' }
+    { lat: '-5491.304', lng: '-2939.538', name: 'Tumbleweed Shop', category: 'Gov Shops' }
   ],
   markerCategories: {
     'Gov Shops': 'Gov Shops',
-    'Category 2': 'Category 2',
   },
   currentFilters: [],
   // Query adjustable parameters
@@ -382,4 +381,16 @@ $('.line').click(function () {
   var text1 = $('.coords1').val();
   var text2 = $('.coords2').val();
   MapBase.markerPoints(text1, text2);
+});
+
+$('.menu-toggle').click(function () {
+  if($('.menu-toggle').text() == '>'){
+    $(".side-menu").addClass("menu-opened");
+    $(".menu-toggle").text("X");
+  }else{
+    $(".side-menu").removeClass("menu-opened");
+    $(".menu-toggle").text(">");
+  }
+
+
 });
